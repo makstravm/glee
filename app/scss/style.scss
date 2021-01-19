@@ -200,9 +200,7 @@
 }
 
 .slider-top {
-  .wrapper {
     background-color: #fcd7b6;
-  }
   &__container {
     max-width: 1400px;
     margin: 0 auto;
@@ -293,7 +291,7 @@
     color: #667983;
     border-radius: 50%;
     background-color: #fde3cc;
-    transition: all .3s;
+    transition: all 0.3s;
   }
   .slick-active {
     & button {
@@ -302,6 +300,12 @@
     }
   }
 }
-
+.service {
+  background-color: $bg;
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 
 @import "media";
