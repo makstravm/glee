@@ -200,7 +200,7 @@
 }
 
 .slider-top {
-    background-color: #fcd7b6;
+  background-color: #fcd7b6;
   &__container {
     max-width: 1400px;
     margin: 0 auto;
@@ -305,6 +305,27 @@
   &__inner {
     display: flex;
     justify-content: space-around;
+  }
+  &__item {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 40px 0;
+  }
+  &__icon {
+    margin-top: 8px;
+  }
+  &__subtitle {
+    font-size: 18px;
+    line-height: 40px;
+    @extend %dmsans-700;
+    margin-left: 25px;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 30px;
+    @extend %dmsans-400;
   }
 }
 
