@@ -1,4 +1,4 @@
-// $default: #585858;
+$title: #191919;
 $default: #7b7b7b;
 $bg: #fef7f0;
 
@@ -26,4 +26,10 @@ $bg: #fef7f0;
 %rubik-400{
   font-family: "Rubik-Regular", sans-serif;
   font-weight: 400;
+}
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
 }
