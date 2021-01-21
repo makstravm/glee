@@ -307,12 +307,20 @@
   &__item {
     width: 300px;
     display: flex;
-    justify-content: space-between;
     align-items: start;
     padding: 40px 0;
   }
   &__icon {
     margin-top: 8px;
+  }
+  &__icon::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 21px;
+    height: 21px;
+    background-color: #fff;
   }
   &__subtitle {
     font-size: 18px;
@@ -336,26 +344,29 @@
   &__filter-list {
     margin-bottom: 75px;
   }
+  &__filter-btn.mixitup-control-active {
+    color: $title;
+  }
   &__inner {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     grid-gap: 40px 30px;
-    min-height: 800px;
+    margin-bottom: 180px;
   }
   &__item {
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
     border-radius: 8px;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: content;
     background-position: center center;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     position: relative;
+    min-height: 400px;
   }
-  &__item:hover  .products-week__group-btn{
+  &__item:hover .products-week__btn {
     opacity: 1;
   }
   &__group-btn {
@@ -363,12 +374,10 @@
     position: absolute;
     display: flex;
     justify-content: center;
-    top: 51%;
+    top: 52%;
     transform: translateY(-25%);
-    opacity: 0;
-    transition: all 0.3s;
   }
-  &__btn+.products-week__btn{
+  &__btn + .products-week__btn {
     margin-left: 16px;
   }
   &__btn {
@@ -383,16 +392,30 @@
     align-items: center;
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
     cursor: pointer;
-    path{
+    opacity: 0;
+    transition: all 0.3s;
+    path {
       transition: all 0.3s;
     }
-  } 
+  }
   &__btn:hover {
     background-color: #a3bbc8;
-    path{
-      fill:#fff;
+    path {
+      fill: #fff;
     }
   }
+  &__btn:active {
+    box-shadow: 0px 0 3px 0px rgba(#191919, 0.5) inset;
+  }
+  &__btn--active.products-week__btn-card,
+  &__btn--active.products-week__btn-wishlist {
+    background-color: #a3bbc8;
+    opacity: 1;
+    path {
+      fill: #fff;
+    }
+  }
+
   &__text {
     line-height: 36px;
     color: #243f4d;
