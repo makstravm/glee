@@ -1,5 +1,5 @@
 $(function () {
-  $('.slider-top__inner').slick({
+  $('.slider-top__slick').slick({
     arrows: false,
     dots: true,
     fade: true,
@@ -8,5 +8,8 @@ $(function () {
 
   });
 
+$('.video-promo__link').fancybox({
+
+})
 
 });
