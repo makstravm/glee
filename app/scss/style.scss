@@ -5,7 +5,7 @@
 @import "global";
 
 .header {
-  padding: 48px 0;
+  padding: 55px 0 60px;
 }
 .wrapper {
   position: relative;
@@ -81,7 +81,7 @@
     height: 26px;
     display: flex;
     align-items: flex-end;
-    justify-content: start;
+    justify-content: flex-start;
     position: relative;
   }
   &__item-link + .user-menu__item-link {
@@ -307,7 +307,7 @@
   &__item {
     width: 300px;
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     padding: 40px 0;
   }
   &__icon {
@@ -344,20 +344,19 @@
   &__filter-list {
     margin-bottom: 75px;
   }
-  &__filter-btn.mixitup-control-active {
-    color: $title;
-  }
+  
   &__inner {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 40px 30px;
+    grid-column-gap: 30px;
+ 
     margin-bottom: 180px;
   }
   &__item {
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
     border-radius: 8px;
     background-repeat: no-repeat;
-    background-size: content;
+    background-size: contain;
     background-position: center center;
     display: flex;
     flex-direction: column;
@@ -365,6 +364,7 @@
     align-items: center;
     position: relative;
     min-height: 400px;
+    margin-bottom: 40px;
   }
   &__item:hover .products-week__btn {
     opacity: 1;
@@ -430,6 +430,51 @@
     @extend %dmsans-700;
   }
 }
+
+.new-design{
+  &__title{
+  margin-bottom: 17px;
+  }
+  &__filter-list{
+    margin-bottom: 75px;
+  }
+  &__inner{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+  }
+  &__link{
+    margin-bottom: 35px;
+  }
+  &__item{
+    min-height: 246px;
+    border-radius: 4px 4px 0px 0px;
+    padding: 40px 35px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition: all .3s;
+    
+  } 
+  &__link:hover .new-design__item{
+      transform: scale(1.05);
+
+    }
+  &__item-title{
+    line-height: 24px;
+    font-size: 20px;
+    color: $title;
+    margin-bottom: 10px;
+    width: 180px;
+
+  }
+  &__text{
+    line-height: 24px;
+    color: #a3bbc8;
+  }
+  
+}
+
 
 .video-promo {
   background-position: center center;

@@ -45,4 +45,7 @@ body {
   & +.filter-btn{
     margin-left: 30px;
   }
+  &.mixitup-control-active {
+    color: $title;
+  }
 }
