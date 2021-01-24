@@ -15,8 +15,18 @@ $(function () {
   $('.video-promo__link').fancybox({
   });
 
-  // var mixerOne = mixitup('.products-week__inner');
-  var mixerTwo = mixitup('.new-design__inner');
+  
+  var mixer1 = mixitup('.products-week__inner', {
+        selectors: {
+          control: '.products-week__filter-btn'
+      }
+  });
+  var mixer2 = mixitup('.new-design__inner', {
+      selectors: {
+          control: '.new-design__filter-btn'
+      }
+  });
+
 
 
 })
