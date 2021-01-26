@@ -592,6 +592,7 @@
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  margin-bottom: 50px;
   &__item {
     display: flex;
     justify-content: center;
@@ -616,9 +617,10 @@
     }
   }
 }
+
 .blog {
- 
-  padding-top: 110px;
+  padding-top: 60px;
+
   margin-bottom: -170px;
   &__top {
     display: flex;
@@ -724,7 +726,7 @@
 }
 
 .partners {
-  &.partners-login-page{
+  &.partners-login-page {
     padding-top: 80px;
   }
   z-index: 0;
@@ -734,7 +736,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-   
   }
 }
 
@@ -814,7 +815,7 @@
     font-size: 14px;
     line-height: 24px;
   }
-  &__link{
+  &__link {
     display: block;
     padding: 12px 0;
     text-align: center;
@@ -823,13 +824,50 @@
     line-height: 32px;
     width: 100%;
     border: 2px solid #a3bbc8;
-    transition: all .3s;
+    transition: all 0.3s;
     &:hover {
       box-shadow: 0px 0px 3px rgba(67, 99, 114, 0.59) inset;
       color: #436372;
       text-shadow: 0px 0px 3px rgba(67, 99, 114, 0.59);
     }
   }
+}
+
+.info {
+  padding: 112px 0 50px;
+  color: #243f4d;
+  @extend %rubik-400;
+  &__title {
+    font-size: 24px;
+    line-height: 40px;
+    
+    margin-bottom: 18px;
+    @extend %rubik-500;
+  }
+  ol.info__list {
+    margin-bottom: 40px;
+    list-style: none;
+    counter-reset: (counter);
+  }
+  &__item {
+    margin-bottom: 18px;
+    position: relative;
+    padding-left: 40px;
+    &:nth-child(n+10)::before {
+      content: counter(counter);
+  }
+    &::before{
+      content: "0" counter(counter) ".";
+      counter-increment: counter;
+      position: absolute;
+      top: 0;
+      left: 5px;
+    }
+  }
+  &__text{
+    margin-bottom: 58px;
+  }
+
 }
 
 @import "media";
