@@ -617,6 +617,7 @@
   }
 }
 .blog {
+ 
   padding-top: 110px;
   margin-bottom: -170px;
   &__top {
@@ -645,7 +646,6 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-
   }
   &__item {
     max-width: 370px;
@@ -673,6 +673,7 @@
     margin-left: 28px;
     border-radius: 15px;
     transform: translateY(-50%);
+    color: #ffffff;
   }
   &__content-title {
     display: block;
@@ -723,13 +724,112 @@
 }
 
 .partners {
+  &.partners-login-page{
+    padding-top: 80px;
+  }
   z-index: 0;
   background-color: #fbf5ee;
+  padding: 265px 0 90px;
   &__inner {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 265px 0 85px;
+   
   }
 }
+
+.modal {
+  padding: 120px 0;
+  &__form {
+    max-width: 470px;
+    @extend %rubik-400;
+    color: #436372;
+    margin: 0 auto;
+  }
+  &__label {
+    display: block;
+    font-size: 14px;
+    line-height: 1;
+  }
+  &__input {
+    display: block;
+    width: 100%;
+    margin: 12px 0 24px;
+    height: 60px;
+    border: 2px solid #f6f6f6;
+    padding: 0 15px;
+  }
+  &__btn {
+    width: 100%;
+    font-size: 18px;
+    border: none;
+    color: #ffffff;
+    line-height: 1;
+    padding: 20px 0 18px;
+    background-color: #a3bbc8;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  &__remember {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f6f6f6;
+    padding: 32px 0;
+    margin-bottom: 28px;
+  }
+  &__remember-checkbox {
+    position: absolute;
+    appearance: none;
+  }
+  &__checkbox-icon {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: #ebebeb;
+    border-radius: 2px;
+    border: none;
+    position: absolute;
+  }
+  &__remember-checkbox:checked + .modal__checkbox-icon {
+    background-image: url("../images/icon/check.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &__checkbox-desc {
+    padding-left: 20px;
+  }
+  &__remember-password {
+    font-size: 14px;
+    line-height: 1;
+    color: #436372;
+    &:hover {
+      color: #436372;
+      text-shadow: 0px 0px 3px rgba(67, 99, 114, 0.59);
+    }
+  }
+  &__text {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  &__link{
+    display: block;
+    padding: 12px 0;
+    text-align: center;
+    color: #243f4d;
+    font-size: 18px;
+    line-height: 32px;
+    width: 100%;
+    border: 2px solid #a3bbc8;
+    transition: all .3s;
+    &:hover {
+      box-shadow: 0px 0px 3px rgba(67, 99, 114, 0.59) inset;
+      color: #436372;
+      text-shadow: 0px 0px 3px rgba(67, 99, 114, 0.59);
+    }
+  }
+}
+
 @import "media";

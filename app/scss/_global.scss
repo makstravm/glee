@@ -34,7 +34,7 @@ body {
   display: flex;
   justify-content: center;
 }
-.filter-btn{
+.filter-btn {
   border: none;
   background-color: transparent;
   @extend %dmsans-700;
@@ -42,10 +42,52 @@ body {
   line-height: 30px;
   color: $default;
   cursor: pointer;
-  & +.filter-btn{
+  & + .filter-btn {
     margin-left: 30px;
   }
   &.mixitup-control-active {
     color: $title;
+  }
+}
+
+.top {
+  padding: 35px 0 25px;
+  background-color: #edf1f4;
+  text-align: center;
+  &__title {
+    font-size: 36px;
+    line-height: 24px;
+    color: #222933;
+    margin-bottom: 10px;
+    @extend %rubik-300;
+  }
+}
+
+.breadcrumbs {
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    padding-right: 20px;
+    position: relative;
+    @extend %rubik-400;
+    &::after {
+      content: "/";
+      position: absolute;
+      right: 7px;
+      top: 0;
+    }
+    &:last-child{
+      padding-right: 0;
+      &::after{
+        display: none;
+      }
+    }
+  }
+  &__link {
+    font-size: 14px;
+    line-height: 24px;
+    color: #888c91;
   }
 }
