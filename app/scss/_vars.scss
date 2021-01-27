@@ -1,6 +1,7 @@
-$title: #191919;
-$default: #7b7b7b;
+$title-home: #191919;
+$default-home: #7b7b7b;
 $bg: #fef7f0;
+$default: #243f4d;
 
 %dmsans-700 {
   font-family: "DMSans-Bold", sans-serif;
@@ -15,6 +16,11 @@ $bg: #fef7f0;
 %dmsans-400 {
   font-family: "DMSans-Regular", sans-serif;
   font-weight: 400;
+}
+
+%rubik-700 {
+  font-family: "Rubik-Bold", sans-serif;
+  font-weight: 700;
 }
 
 %rubik-500 {
@@ -36,6 +42,12 @@ $bg: #fef7f0;
   font-family: "Poppins-Bold", sans-serif;
   font-weight: 700;
 }
+
+%popins-600 {
+  font-family: "Poppins-Bold", sans-serif;
+  font-weight: 600;
+}
+
 
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});

@@ -26,6 +26,15 @@
 }
 
 @font-face {
+  font-family: "Rubik-Bold";
+  font-weight: 700;
+  src: local("Rubik-Bold"), 
+       url(../fonts/Rubik-Bold.woff2), format("woff2"), 
+       url(../fonts/Rubik-Bold.woff), format("woff");
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Rubik-Medium";
   font-weight: 500;
   src: local("Rubik-Medium"), 
@@ -58,5 +67,14 @@
   src: local("Poppins-Bold"), 
        url(../fonts/Poppins-Bold.woff2), format("woff2"), 
        url(../fonts/Poppins-Bold.woff), format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins-SemiBold";
+  font-weight: 600;
+  src: local("Poppins-SemiBold"), 
+       url(../fonts/Poppins-SemiBold.woff2), format("woff2"), 
+       url(../fonts/Poppins-SemiBold.woff), format("woff");
   font-display: swap;
 }
