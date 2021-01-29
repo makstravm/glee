@@ -1,6 +1,7 @@
-$title: #191919;
-$default: #7b7b7b;
+$title-home: #191919;
+$default-home: #7b7b7b;
 $bg: #fef7f0;
+$default: #243f4d;
 
 %dmsans-700 {
   font-family: "DMSans-Bold", sans-serif;
@@ -17,6 +18,11 @@ $bg: #fef7f0;
   font-weight: 400;
 }
 
+%rubik-700 {
+  font-family: "Rubik-Bold", sans-serif;
+  font-weight: 700;
+}
+
 %rubik-500 {
   font-family: "Rubik-Medium", sans-serif;
   font-weight: 500;
@@ -27,10 +33,29 @@ $bg: #fef7f0;
   font-weight: 400;
 }
 
+%rubik-300 {
+  font-family: "Rubik-Light", sans-serif;
+  font-weight: 300;
+}
+
 %popins-700 {
   font-family: "Poppins-Bold", sans-serif;
   font-weight: 700;
 }
+
+%popins-600 {
+  font-family: "Poppins-Bold", sans-serif;
+  font-weight: 600;
+}
+
+%checkbox-hidden{
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
 
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});

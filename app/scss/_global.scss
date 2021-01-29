@@ -26,7 +26,7 @@ body {
 .title {
   font-size: 36px;
   line-height: 48px;
-  color: $title;
+  color: $title-home;
   text-align: center;
   @extend %dmsans-700;
 }
@@ -34,18 +34,110 @@ body {
   display: flex;
   justify-content: center;
 }
-.filter-btn{
+.filter-btn {
   border: none;
   background-color: transparent;
   @extend %dmsans-700;
   font-size: 16px;
   line-height: 30px;
-  color: $default;
+  color: $default-home;
   cursor: pointer;
-  & +.filter-btn{
+  & + .filter-btn {
     margin-left: 30px;
   }
   &.mixitup-control-active {
-    color: $title;
+    color: $title-home;
   }
+}
+
+.top {
+  padding: 35px 0 25px;
+  background-color: #edf1f4;
+  text-align: center;
+  &__title {
+    font-size: 36px;
+    line-height: 24px;
+    color: #222933;
+    margin-bottom: 10px;
+    @extend %rubik-300;
+  }
+}
+
+.breadcrumbs {
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    padding-right: 20px;
+    position: relative;
+    @extend %rubik-400;
+    &::after {
+      content: "/";
+      position: absolute;
+      right: 7px;
+      top: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__link {
+    font-size: 14px;
+    line-height: 24px;
+    color: #888c91;
+  }
+}
+
+.jq-ry-container {
+  padding: 0;
+}
+
+.pagination {
+  display: flex;
+  @extend %rubik-400;
+  color: #243f4d;
+  &__arrows {
+    display: inline-block;
+    padding: 9px 20px;
+    border: 1px solid #a3bbc8;
+    color: #243f4d;
+    transition: all 0.3s;
+    margin-right: 15px;
+    &:hover {
+      background-color: #a3bbc8;
+      color: #ffffff;
+    }
+  }
+  &__arrows-prev{
+    display: none;
+  }
+  &__list {
+    display: flex;
+    margin-right: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+  &__item {
+    margin-right: 15px;
+  }
+  &__link {
+    padding: 15px 20px;
+    height: 50px;
+    border: 1px solid #a3bbc8;
+    color: #243f4d;
+    transition: all 0.3s;
+    &:hover {
+      background-color: #a3bbc8;
+      color: #ffffff;
+    }
+  }
+  &__link.pagination__link--active {
+    background-color: #a3bbc8;
+    color: #ffffff;
+  }
+
 }
