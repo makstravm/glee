@@ -4,7 +4,7 @@ $(function () {
     $('.menu__list').toggleClass('menu__list--active');
   });
 
-  $('.product-detalis__tabs-link').on('click', function(e){
+  $('.product-detalis__tabs-link').on('click', function (e) {
     e.preventDefault();
     $('.product-detalis__tabs-link').removeClass('product-detalis__tabs--active');
     $(this).addClass('product-detalis__tabs--active');
@@ -50,7 +50,7 @@ $(function () {
   $('.relate-products__slide').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
-    arrows: true,  
+    arrows: true,
     infinite: false,
     appendArrows: $('.relate-products__arrows'),
     prevArrow: '<button type = "button" class = "relate-products__btn-prev"> <img src="images/icon/arrow-slick-left.svg" alt="arrow left"> </button>',
@@ -89,15 +89,22 @@ $(function () {
     }
   });
 
-  
+
   $('.video-promo__link').fancybox({
   });
 
-  
+
   var mixer1 = mixitup('.products-mix', {
     selectors: {
-      control: '.products__filter-btn'
+      control: '.products__filter-btn',
+    },
+      animation: {
+      duration: 700,
+      nudge: true,
+      reverseOut: true,
+      effects: "fade rotateX(31deg) rotateY(45deg) stagger(100ms)",
     }
+
   });
 
   var mixer2 = mixitup('.new-design__inner', {
@@ -113,7 +120,7 @@ let map;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat:29.90115464489589, lng: -95.37658709709325},
+    center: { lat: 29.90115464489589, lng: -95.37658709709325 },
     zoom: 8,
   });
 }
