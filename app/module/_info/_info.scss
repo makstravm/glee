@@ -1,0 +1,43 @@
+.info {
+  padding: 112px 0 50px;
+  color: $default;
+  @extend %rubik-400;
+  &__title {
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 18px;
+    @extend %rubik-500;
+  }
+  ol.info__list {
+    margin-bottom: 40px;
+    list-style: none;
+    counter-reset: (counter);
+  }
+  &__item {
+    margin-bottom: 18px;
+    position: relative;
+    padding-left: 40px;
+    &:nth-child(n + 10)::before {
+      content: counter(counter);
+    }
+    &::before {
+      content: "0" counter(counter) ".";
+      counter-increment: counter;
+      position: absolute;
+      top: 0;
+      left: 6px;
+    }
+  }
+  &__text {
+    margin-bottom: 58px;
+  }
+}
+
+@media (max-width: 650px) {
+  .info {
+    padding-top: 75px;
+    &__text {
+      margin-bottom: 35px;
+    }
+  }
+}

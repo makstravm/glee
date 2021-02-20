@@ -5,213 +5,216 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Glee</title>
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/login.min.css">
 </head>
 
 <body>
   <header class="header">
-    <div class="wrapper">
-      <a class="logo" href="#">
-        <img src="images/logo.png" alt="logo" class="logo__img">
+  <div class="wrapper">
+    <a class="logo" href="#">
+      <img src="images/logo.png" alt="logo" class="logo__img">
+    </a>
+    <nav class="menu">
+      <ul class="menu__list">
+        <li class="menu__list-item">
+          <a class="menu__list-link" href="#">Home +</a>
+        </li>
+        <li class="menu__list-item">
+          <a class="menu__list-link" href="#">About</a>
+        </li>
+        <li class="menu__list-item">
+          <a class="menu__list-link" href="#">Services</a>
+        </li>
+        <li class="menu__list-item">
+          <a class="menu__list-link" href="#"> Pages +</a>
+        </li>
+        <li class="menu__list-item">
+          <a class="menu__list-link" href="#">News</a>
+        </li>
+        <li class="menu__list-item">
+          <a class="menu__list-link" href="#">Contact</a>
+        </li>
+      </ul>
+      <button class="menu__btn">
+        <span></span></button>
+    </nav>
+    <div class="user-menu">
+      <a class="user-menu__link user-menu__link-search" href="#">
+        <img class="user-menu__img" src="images/icon/header-search.svg" alt="search menu icon">
       </a>
-      <nav class="menu">
-        <ul class="menu__list">
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#">Home +</a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#">About</a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#">Services</a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#"> Pages +</a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#">News</a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#">Contact</a>
-          </li>
-        </ul>
-        <button class="menu__btn"><span></span></button>
-      </nav>
-      <div class="user-menu">
-        <a class="user-menu__link user-menu__link-search" href="#">
-          <img class="user-menu__img" src="images/icon/header-search.svg" alt="search menu icon">
+      <div class="user-menu__items">
+        <a class="user-menu__item-link " href="#">
+          <img class="user-item__img" src="images/icon/header-wishlist.svg" alt="heart menu icon">
+          <span class="user-menu__item-num">0</span>
         </a>
-        <div class="user-menu__items">
-          <a class="user-menu__item-link " href="#">
-            <img class="user-item__img" src="images/icon/header-wishlist.svg" alt="heart menu icon">
-            <span class="user-menu__item-num">0</span>
-          </a>
-          <a class="user-menu__item-link" href="#">
-            <img class="user-menu__img" src="images/icon/header-card.svg" alt="heart menu icon">
-            <span class="user-menu__item-num">0</span>
-          </a>
-        </div>
-        <button class="user-menu__link user-menu__link-bento">
-          <img class="user-menu__img" src="images/icon/menu-add.svg" alt="add menu icon">
-        </button>
+        <a class="user-menu__item-link" href="#">
+          <img class="user-menu__img" src="images/icon/header-card.svg" alt="heart menu icon">
+          <span class="user-menu__item-num">0</span>
+        </a>
       </div>
+      <button class="user-menu__link user-menu__link-bento">
+        <img class="user-menu__img" src="images/icon/menu-add.svg" alt="add menu icon">
+      </button>
     </div>
-  </header>
+  </div>
+</header>
 
   <main class="main">
 
     <section class="top">
-      <div class="container">
-        <h3 class="top__title">
-          Log in
-        </h3>
-        <div class="breadcrumbs">
-          <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">Home</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link breadcrumbs__link--active" href="#">Log in</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
+  <div class="container">
+    <h3 class="top__title">
+      Log in
+    </h3>
+    <div class="breadcrumbs">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="#">Home</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link breadcrumbs__link--active" href="#">Log in</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
     <section class="modal">
-      <div class="container">
-        <form class="modal__form" action="#">
-          <label class="modal__label">
-            Username or email address *
-            <input class="modal__input" type="text" required>
-          </label>
-          <label class="modal__label">
-            Password *
-            <input class="modal__input" type="password" required>
-          </label>
-          <button class="modal__btn" type="submit">Log in</button>
-          <div class="modal__remember">
-            <label class="modal__label modal__label-checkbox">
-              <input class="modal__remember-checkbox" type="checkbox">
-              <span class="modal__checkbox-icon">
-              </span>
-              <span class="modal__checkbox-desc">
-                Remember me</span>
-            </label>
-            <a class="modal__remember-password" href="#">
-              Lost your password?
-            </a>
-          </div>
-          <p class="modal__text">Not registered? No problem</p>
-          <a class="modal__link" href="#">Create an account</a>
-        </form>
+  <div class="container">
+    <form class="modal__form" action="#">
+      <label class="modal__label">
+        Username or email address *
+        <input class="modal__input" type="text" required>
+      </label>
+      <label class="modal__label">
+        Password *
+        <input class="modal__input" type="password" required>
+      </label>
+      <button class="modal__btn" type="submit">Log in</button>
+      <div class="modal__remember">
+        <label class="modal__label modal__label-checkbox">
+          <input class="modal__remember-checkbox" type="checkbox">
+          <span class="modal__checkbox-icon">
+          </span>
+          <span class="modal__checkbox-desc">
+            Remember me</span>
+        </label>
+        <a class="modal__remember-password" href="#">
+          Lost your password?
+        </a>
       </div>
-    </section>
+      <p class="modal__text">Not registered? No problem</p>
+      <a class="modal__link" href="#">Create an account</a>
+    </form>
+  </div>
+</section>
     <div class="partners partners-no-blog">
-      <div class="container">
-        <div class="partners__inner">
-          <img class="partners__img" src="images/content/partners/1.png" alt="partners icon">
-          <img class="" src="images/content/partners/2.png" alt="partners icon">
-          <img class="" src="images/content/partners/3.png" alt="partners icon">
-          <img class="" src="images/content/partners/4.png" alt="partners icon">
-          <img class="" src="images/content/partners/5.png" alt="partners icon">
-        </div>
-      </div>
+  <div class="container">
+    <div class="partners__inner">
+      <img class="partners__img" src="images/content/partners/1.png" alt="partners icon">
+      <img class="partners__img" src="images/content/partners/2.png" alt="partners icon">
+      <img class="partners__img" src="images/content/partners/3.png" alt="partners icon">
+      <img class="partners__img" src="images/content/partners/4.png" alt="partners icon">
+      <img class="partners__img" src="images/content/partners/5.png" alt="partners icon">
+    </div>
+  </div>
+
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-top__contacts">
-          <a class="footer-top__logo" href="#">
-            <img src="images/logo.png" alt="logo" class="logo__img">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-top__contacts">
+        <a class="footer-top__logo" href="#">
+          <img src="images/logo.png" alt="logo" class="logo__img">
+        </a>
+        <address class="footer-top__address">
+          ADDRESS: 4772 Wines Lane
+          Houston, TX 77032
+        </address>
+        <div class="footer-top__phone">
+          Telephone:
+          <a class="footer-top__phone-link" href="tel:+8323475843"> +832-347-5843
           </a>
-          <address class="footer-top__address">
-            ADDRESS: 4772 Wines Lane
-            Houston, TX 77032
-          </address>
-          <div class="footer-top__phone">
-            Telephone:
-            <a class="footer-top__phone-link" href="tel:+8323475843"> +832-347-5843
-            </a>
-          </div>
-          <div class="footer-top__email">
-            Email:
-            <a class="footer-top__email-link" href="mailto:contact@Glee.com"> contact@Glee.com
-            </a>
-          </div>
         </div>
-        <div class="footer-top__nav">
-          <h6 class="footer-top__title">Services</h6>
-          <ul class="footer-top__list">
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">About us</a>
-            </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Return Policy</a>
-            </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Our Blog</a>
-            </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Contact Us</a>
-            </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Terms & Condition</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-top__nav">
-          <h6 class="footer-top__title">Account</h6>
-          <ul class="footer-top__list">
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Your Account</a>
-            </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Checkout</a>
-            </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Login</a>
-            </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Register</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-top__mailing">
-          <h6 class="footer-top__title">newsletter</h6>
-          <p class="footer-top__text">
-            Subscribe by our newsletter and get
-            update protidin.
-          </p>
-          <form class="footer-top__form" action="#">
-            <input class="footer-top__input" type="email" placeholder="Email address" required>
-            <button class="footer-top__button" type="submit">Subscribe</button>
-          </form>
+        <div class="footer-top__email">
+          Email:
+          <a class="footer-top__email-link" href="mailto:contact@Glee.com"> contact@Glee.com
+          </a>
         </div>
       </div>
-      <div class="footer-bottom">
-        <div class="footer-bottom__copy">
-          ©2020 CopyRight Example. All rights reserved.
-        </div>
-        <div class="footer-bottom__nav">
-          <ul class="footer-bottom__list">
-            <li class="footer-bottom__item">
-              <a class="footer-bottom__link" href="#">Home</a>
-            </li>
-            <li class="footer-bottom__item">
-              <a class="footer-bottom__link" href="#">About</a>
-            </li>
-            <li class="footer-bottom__item">
-              <a class="footer-bottom__link" href="#">Blog</a>
-            </li>
-            <li class="footer-bottom__item">
-              <a class="footer-bottom__link" href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
+      <div class="footer-top__nav">
+        <h6 class="footer-top__title">Services</h6>
+        <ul class="footer-top__list">
+          <li class="footer-top__item">
+            <a class="footer-top__link" href="#">About us</a>
+          </li>
+          <li class="footer-top__item">
+            <a class="footer-top__link" href="#">Return Policy</a>
+          </li>
+          <li class="footer-top__item">
+            <a class="footer-top__link" href="#">Our Blog</a>
+          </li>
+          <li class="footer-top__item">
+            <a class="footer-top__link" href="#">Contact Us</a>
+          </li>
+          <li class="footer-top__item">
+            <a class="footer-top__link" href="#">Terms & Condition</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-top__nav">
+        <h6 class="footer-top__title">Account</h6>
+        <ul class="footer-top__list">
+          <li class="footer-top__item">
+            <a class="footer-top__link" href="#">Your Account</a>
+          </li>
+          <li class="footer-top__item">
+            <a class="footer-top__link" href="#">Checkout</a>
+          </li>
+          <li class="footer-top__item">
+            <a class="footer-top__link" href="#">Login</a>
+          </li>
+          <li class="footer-top__item">
+            <a class="footer-top__link" href="#">Register</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-top__mailing">
+        <h6 class="footer-top__title">newsletter</h6>
+        <p class="footer-top__text">
+          Subscribe by our newsletter and get
+          update protidin.
+        </p>
+        <form class="footer-top__form" action="#">
+          <input class="footer-top__input" type="email" placeholder="Email address" required>
+          <button class="footer-top__button" type="submit">Subscribe</button>
+        </form>
       </div>
     </div>
-  </footer> 
+    <div class="footer-bottom">
+      <div class="footer-bottom__copy">
+        ©2020 CopyRight Example. All rights reserved.
+      </div>
+      <div class="footer-bottom__nav">
+        <ul class="footer-bottom__list">
+          <li class="footer-bottom__item">
+            <a class="footer-bottom__link" href="#">Home</a>
+          </li>
+          <li class="footer-bottom__item">
+            <a class="footer-bottom__link" href="#">About</a>
+          </li>
+          <li class="footer-bottom__item">
+            <a class="footer-bottom__link" href="#">Blog</a>
+          </li>
+          <li class="footer-bottom__item">
+            <a class="footer-bottom__link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+ 
   <script src="js/main.min.js"></script>
 </body>
 

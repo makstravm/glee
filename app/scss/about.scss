@@ -1,0 +1,17 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
+
+@import '../module/_header/_header.scss';
+
+
+@import '../module/_about/_about.scss';
+@import '../module/_advant/_advant.scss';
+@import '../module/_team/_team.scss';
+@import '../module/_blog/_blog.scss';
+@import '../module/_partners/_partners.scss';
+
+
+@import '../module/_footer/_footer.scss';
+

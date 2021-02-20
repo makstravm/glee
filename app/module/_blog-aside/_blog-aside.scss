@@ -1,0 +1,119 @@
+.filter {
+  &__item {
+    margin-bottom: 50px;
+  }
+  &__title {
+    display: inline-block;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative;
+    padding-right: 55px;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 38px;
+      height: 2px;
+      right: 0;
+      bottom: 50%;
+      background-color: #a3bbc8;
+    }
+  }
+}
+.filter-category {
+  &__label {
+    display: block;
+    width: 100%;
+    margin-bottom: 1px;
+  }
+  &__input {
+    @extend %checkbox-hidden;
+    &:checked + .filter-category__checkbox {
+      background-color: #edf1f4;
+    }
+  }
+  &__checkbox {
+    @extend %rubik-400;
+    border-radius: 5px;
+    line-height: 42px;
+    padding: 0 20px 0 15px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 17px;
+      right: 22px;
+      background-image: url("../images/icon/arrow-right.svg");
+      background-repeat: no-repeat;
+      width: 5px;
+      height: 10px;
+      background-size: cover;
+    }
+  }
+}
+.recent-post {
+  .filter__title {
+    margin-bottom: 30px;
+  }
+  &__item {
+    display: flex;
+  }
+  &__wrapper + .recent-post__wrapper{
+    padding-top: 20px;
+  }
+  &__img {
+    min-width: 71px;
+    height: 71px;
+    object-fit: cover;
+  }
+  &__box {
+    margin-left: 20px;
+    @extend %rubik-400;
+  }
+  &__item-title {
+    color: #333333;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  &__item-date {
+    display: block;
+    color: #9a9a9a;
+    font-size: 12px;
+    padding-left: 20px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../images/icon/calendar.svg");
+      width: 11px;
+      height: 11px;
+      left: 0;
+      top: 7px;
+    }
+  }
+}
+@media (max-width: 950px) {
+  .filter__item {
+    width: 270px;
+    margin-right: 75px;
+  }
+  .filter-category__label--slide {
+    display: none;
+  }
+  .recent-post__wrapper {
+    display: none;
+  }
+  .recent-post{
+    .filter__title{
+      margin-bottom: 20px;
+    }
+  }
+}
+@media (max-width: 770px) {
+  .recent-post {
+    width: 270px;
+  }
+  .filter__item {
+    margin-right: 10px;
+  }
+}

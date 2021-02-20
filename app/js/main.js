@@ -1,10 +1,28 @@
 $(function () {
+  $('.filter__button').on('click', function () {
+    $('.shop__filters').slideToggle();
+  });
 
+  var monitorWidth = $(window).width();
+  if (monitorWidth <= 950) {
+    $('.filter__title--slide').on('click', function () {
+      $('.filter-category__label--slide').slideToggle();
+    });
+    $('.recent-post').on('click', function () {
+      $('.recent-post__wrapper').slideToggle();
+    });
+
+  }
+  $(window).resize(function () {
+    if ($(window).width() <= 950 && monitorWidth > 950) {
+      location.reload();
+    }
+  });
   $('.menu__btn').on('click', function () {
     $('.menu__list').toggleClass('menu__list--active');
   });
 
-  $('.product-detalis__tabs-link').on('click', function(e){
+  $('.product-detalis__tabs-link').on('click', function (e) {
     e.preventDefault();
     $('.product-detalis__tabs-link').removeClass('product-detalis__tabs--active');
     $(this).addClass('product-detalis__tabs--active');
@@ -12,8 +30,8 @@ $(function () {
     $($(this).attr('href')).addClass('product-detalis__tabs--active');
   })
 
-  $('.products-page').on('click', function () {
-    $('.user-menu__link-bento, .products__inner').toggleClass('products--active');
+  $('.filter__button-products').on('click', function () {
+    $('.shop-content').toggleClass('products--active');
   });
 
   $('.products__btn').on('click', function () {
@@ -36,7 +54,15 @@ $(function () {
     asNavFor: '.detalis-slide__thumb',
     draggable: false,
     arrows: false,
-    fade: true
+    fade: true,
+    responsive: [
+      {
+        breakpoint: 601,
+        settings: {
+          draggable: true
+        }
+      }
+    ]
   });
 
   $('.slider-top__slick').slick({
@@ -50,11 +76,31 @@ $(function () {
   $('.relate-products__slide').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
-    arrows: true,  
+    arrows: true,
     infinite: false,
     appendArrows: $('.relate-products__arrows'),
     prevArrow: '<button type = "button" class = "relate-products__btn-prev"> <img src="images/icon/arrow-slick-left.svg" alt="arrow left"> </button>',
-    nextArrow: '<button type = "button" class = "relate-products__btn-next"> <img src="images/icon/arrow-slick-right.svg" alt="arrow right"> </button>'
+    nextArrow: '<button type = "button" class = "relate-products__btn-next"> <img src="images/icon/arrow-slick-right.svg" alt="arrow right"> </button>',
+    responsive: [
+      {
+        breakpoint: 1201,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 905,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 581,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
   });
 
 
@@ -89,15 +135,22 @@ $(function () {
     }
   });
 
-  
+
   $('.video-promo__link').fancybox({
   });
 
-  
+
   var mixer1 = mixitup('.products-mix', {
     selectors: {
-      control: '.products__filter-btn'
+      control: '.products__filter-btn',
+    },
+    animation: {
+      duration: 700,
+      nudge: true,
+      reverseOut: true,
+      effects: "fade rotateX(31deg) rotateY(45deg) stagger(100ms)",
     }
+
   });
 
   var mixer2 = mixitup('.new-design__inner', {
@@ -113,7 +166,7 @@ let map;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat:29.90115464489589, lng: -95.37658709709325},
+    center: { lat: 29.90115464489589, lng: -95.37658709709325 },
     zoom: 8,
   });
 }
