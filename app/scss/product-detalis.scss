@@ -1,0 +1,20 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
+
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../node_modules/rateyo/src/jquery.rateyo';
+@import '../../node_modules/jquery-form-styler/dist/jquery.formstyler';
+
+
+@import '../module/_header/_header.scss';
+@import '../module/_product-detalis/_product-detalis.scss';
+@import '../module/_relate-products/_relate-products.scss';
+@import '../module/_products/_products.scss';
+@import '../module/_blog/_blog.scss';
+@import '../module/_partners/_partners.scss';
+
+
+@import '../module/_footer/_footer.scss';
+

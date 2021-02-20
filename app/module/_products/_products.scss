@@ -1,0 +1,128 @@
+.products {
+  padding: 65px 0 85px;
+  &__title {
+    margin-bottom: 17px;
+  }
+  &__filter-list {
+    margin-bottom: 75px;
+  }
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-gap: 40px 30px;
+  }
+  &__item {
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    border-radius: 8px;
+    min-height: 380px;
+    position: relative;
+  }
+  &__box-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 260px;
+    padding: 0 5px;
+    margin: 0 auto 20px;
+    width: 270px;
+  }
+  &__img {
+    width: 80%;
+    height: 79%;
+    object-fit: contain;
+  }
+  &__item:hover .products__btn {
+    opacity: 1;
+  }
+  &__group-btn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__btn + .products__btn {
+    margin-left: 16px;
+  }
+  &__btn {
+    border: none;
+    padding: 0;
+    background-color: #fff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s;
+    path {
+      transition: all 0.3s;
+    }
+  }
+  &__btn:hover {
+    background-color: #a3bbc8;
+    path {
+      fill: #fff;
+    }
+  }
+  &__btn:active {
+    box-shadow: 0px 0 3px 0px rgba(#191919, 0.5) inset;
+  }
+  &__btn--active.products__btn-card,
+  &__btn--active.products__btn-wishlist {
+    background-color: #a3bbc8;
+    opacity: 1;
+    path {
+      fill: #fff;
+    }
+  }
+  &__content {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  &__text-link {
+    line-height: 36px;
+    color: $default;
+    @extend %dmsans-500;
+  }
+  &__price {
+    display: block;
+    text-align: center;
+    color: #a3bbc8;
+    line-height: 24px;
+    @extend %dmsans-700;
+  }
+  &__star,
+  &__descripton {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .filter-list {
+    margin-bottom: 50px;
+  }
+  .products {
+    &__inner {
+      grid-gap: 25px 20px;
+    }
+  }
+}
+
+@media (max-width: 475px) {
+  .filter-list {
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .filter-btn {
+    & + .filter-btn {
+      margin: 0 5px 10px;
+    }
+    margin: 0 5px 10px;
+  }
+}

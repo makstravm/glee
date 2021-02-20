@@ -1,0 +1,40 @@
+.video-promo {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 50px;
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+      background-color: rgba(163, 187, 200, 0.4);
+    }
+  }
+  &__link {
+    width: 98px;
+    height: 98px;
+    transition: all 0.3s;
+    position: relative;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media (max-width: 1040px) {
+  .video-promo__item {
+    min-height: 400px;
+  }
+}
+@media (max-width: 550px) {
+  .video-promo__item {
+    min-height: 350px;
+  }
+}

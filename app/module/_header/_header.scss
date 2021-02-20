@@ -1,0 +1,228 @@
+.header {
+  padding: 55px 0 60px;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 0px;
+  left: 15px;
+}
+
+.menu {
+  &__btn {
+    display: none;
+  }
+  & .menu__list {
+    display: flex;
+    justify-content: center;
+    padding-top: 6px;
+  }
+  &__list-item + .menu__list-item {
+    margin-left: 30px;
+  }
+  &__list-link {
+    font-size: 15px;
+    line-height: 12px;
+    @extend %rubik-500;
+    color: #436372;
+    transition: all 0.3s;
+    &:hover {
+      color: #436372;
+      text-shadow: 0px 0px 3px rgba(67, 99, 114, 0.59);
+    }
+  }
+}
+
+.user-menu {
+  position: absolute;
+  top: 0px;
+  width: 320px;
+  right: 15px;
+  display: flex;
+  justify-content: space-between;
+  &__link {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    align-items: center;
+    transition: all 0.3s;
+  }
+  &__link-search {
+    background-color: #edf1f4;
+    &:hover {
+      background-color: #d0d3d6;
+    }
+  }
+  &__link-bento {
+    cursor: pointer;
+    background-color: #a3bbc8;
+    border: none;
+    outline: none;
+    &:hover {
+      background-color: #d0d3d6;
+    }
+  }
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fcd7b6;
+    border-radius: 25px;
+    width: 178px;
+    height: 50px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 32px;
+      background-color: #fde7d3;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__item-link {
+    width: 27px;
+    height: 26px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    position: relative;
+  }
+  &__item-link + .user-menu__item-link {
+    margin-left: 53px;
+  }
+  &__item-num {
+    position: absolute;
+    width: 17px;
+    height: 16px;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    background-color: #fff;
+    color: $default;
+    font-size: 10px;
+    line-height: 17px;
+    @extend %dmsans-400;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .logo {
+    position: static;
+  }
+  .menu {
+    & .menu__list {
+      display: flex;
+      justify-content: center;
+      padding-top: 40px;
+    }
+  }
+  .user-menu {
+    flex-wrap: wrap;
+    top: -3px;
+  }
+}
+
+@media (max-width: 650px) {
+  .header {
+    padding: 30px 0 30px;
+  }
+}
+
+@media (max-width: 550px) {
+  .header {
+    padding: 30px 0 60px;
+  }
+  .menu {
+    &__btn {
+      display: block;
+      margin-top: 40px;
+      position: relative;
+      width: 35px;
+      height: 25px;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      padding: 0;
+      span {
+        width: 100%;
+        height: 3px;
+        background-color: #243f4d;
+      }
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: #243f4d;
+        left: 0;
+      }
+      &::before {
+        top: 0;
+      }
+      &::after {
+        bottom: 0;
+      }
+    }
+    & .menu__list {
+      top: 0;
+      right: 0;
+      display: inline-block;
+      position: absolute;
+      width: 50%;
+      text-align: center;
+      padding: 0;
+      background-color: #fff;
+      z-index: 5;
+      transform: translateY(-200%);
+      transition: all 0.3s;
+      &.menu__list--active {
+        transform: translateX(0%);
+      }
+    }
+    &__list-link {
+      padding: 15px 0;
+      display: block;
+    }
+    &__list-item + .menu__list-item {
+      margin-left: 0px;
+    }
+  }
+  .user-menu {
+    flex-wrap: wrap;
+    top: 0px;
+    width: 155px;
+    justify-content: flex-end;
+    &__items {
+      width: 120px;
+      order: -1;
+      margin-bottom: 15px;
+    }
+    .user-menu__link-bento {
+      margin-left: 15px;
+    }
+    &__item-link + .user-menu__item-link {
+      margin-left: 25px;
+    }
+  }
+}
+@media (max-width: 375px) {
+  .logo {
+    img {
+      width: 120px;
+      padding-top: 7px;
+    }
+  }
+}

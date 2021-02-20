@@ -1,0 +1,48 @@
+.advant {
+  padding: 85px 0 75px;
+  background-color: #fcd7b6;
+  text-align: center;
+  color: $default;
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  &__item {
+    margin: 0 20px;
+  }
+  &__img {
+    margin: 0 auto;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+  &__num {
+    font-size: 36px;
+    line-height: 32px;
+  }
+  &__text {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+@media (max-width: 840px) {
+  .advant {
+    &__item {
+      margin: 0 50px 35px;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .advant {
+    &__item {
+      margin: 0 20px 35px;
+    }
+  }
+}
+@media (max-width: 475px) {
+  .advant {
+    &__item {
+      margin: 0 40px 35px;
+    }
+  }
+}

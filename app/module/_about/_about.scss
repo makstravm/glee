@@ -1,0 +1,131 @@
+.about {
+  padding: 120px 0;
+  color: $default;
+  @extend %rubik-400;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content {
+    max-width: 570px;
+    width: 100%;
+    padding-top: 85px;
+    margin-left: 30px;
+    padding-left: 20px;
+  }
+  &__experience {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 35px;
+  }
+  &__experience-year {
+    @extend %rubik-700;
+    color: #a3bbc8;
+    font-size: 140px;
+    line-height: 105px;
+  }
+  &__experience-text {
+    margin-left: 30px;
+    span {
+      display: block;
+    }
+  }
+  &__title {
+    @extend %dmsans-700;
+    font-size: 36px;
+    line-height: 32px;
+    margin-bottom: 40px;
+  }
+  &__text {
+    padding-bottom: 60px;
+    border-bottom: 2px solid #ebeef3;
+  }
+  &__stat {
+    display: flex;
+    padding-top: 30px;
+    flex-wrap: wrap;
+  }
+  &__stat-item {
+    color: #4c4c4c;
+    @extend %dmsans-700;
+    margin-left: 17px;
+    line-height: 17px;
+    padding: 5px 25px 15px 60px;
+    border-right: 1px solid #e6eaf0;
+    position: relative;
+    &:last-child {
+      border: none;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 0;
+      background-repeat: no-repeat;
+    }
+  }
+  &__stat-project::after {
+    width: 36px;
+    height: 37px;
+    background-image: url("../images/icon/about-project.svg");
+  }
+  &__stat-revenue::after {
+    width: 43px;
+    height: 39px;
+    background-image: url("../images/icon/about-revenue.svg");
+  }
+  &__stat-award::after {
+    width: 41px;
+    height: 40px;
+    background-image: url("../images/icon/about-award.svg");
+  }
+  &__stat-num {
+    color: $default;
+    display: block;
+    font-size: 36px;
+    line-height: 38px;
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .about__content {
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .about__img {
+    display: none;
+  }
+  .about__content {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 75px 0;
+  }
+  .about__stat-item {
+    margin-left: 17px;
+    padding-bottom: 25px;
+    border-right: none;
+  }
+}
+
+@media (max-width: 475px) {
+  .about__stat-item {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 400px) {
+  .about__stat {
+    flex-direction: column;
+    align-items: center;
+  }
+}
